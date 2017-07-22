@@ -74,6 +74,10 @@
         <option value="$PROJECT_DIR$/weather-app/pom.xml" />
         <option value="$PROJECT_DIR$/weather-service/pom.xml" />
         <option value="$PROJECT_DIR$/discovery-server/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix-dashboard/pom.xml" />
+        <option value="$PROJECT_DIR$/datetime-app/pom.xml" />
+        <option value="$PROJECT_DIR$/datetime-service/pom.xml" />
+        <option value="$PROJECT_DIR$/turbine/pom.xml" />
       </list>
     </option>
   </component>
