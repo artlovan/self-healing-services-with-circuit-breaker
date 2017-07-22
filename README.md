@@ -1,4 +1,4 @@
-# self-healing-services-with-circuit-breaker
+# circuit-breaker-hystrix-dashboard-service-discovery
 
 Demo on Hystrix circuit breaker, how weather-app takes over the response
 and opens the circuit when weather-service is not reachable.
