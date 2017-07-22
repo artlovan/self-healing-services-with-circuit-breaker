@@ -1,17 +1,14 @@
-# circuit-breaker-hystrix-dashboard-service-discovery
+# circuit-breaker-hystrix-dashboard-turbine-service-discovery
 
-Demo on Hystrix circuit breaker, how weather-app takes over the response
-and opens the circuit when weather-service is not reachable.
+Demo on Turbite, aggregating hystrix dashboards.
 
 1. Run discovery-server
-2. Run weather-service
-3. Run weather-app
-4. Run hystrix-dashboard
+2. Run services: weather-service, weather-app, datetime-service, datetime-app, hystrix-dashboard
+3. Run turbine service
+4. Generate metrics (hit few times): $ curl localhost:8000/current/weather && curl localhost:8001/current/time
 5. In browser, go to http://localhost:8080/hystrix
-6. Run curl few times: $ curl localhost:8000/current/weather
-7. Back in browser, in input field; enter "http://localhost:8000/hystrix.stream"
-8. Add title in Title input field "Weather App"
-9. Click "Monitor Stream" button
-10. You can run No. 7 to generate new metrics
-11. For real fun, with apache benchmark, run: $ ab -c 20 -n 100 localhost:8000/current/weather
-12. Bring down all you instances
+6. In input field; enter "http://localhost:3000/turbine.stream" 
+7. Add title in Title input field "Turbine"
+8. Generate metrics: run: $ curl localhost:8000/current/weather && curl localhost:8001/current/time
+9. Observe Turbine dashboard
+10. Bring down all your instances

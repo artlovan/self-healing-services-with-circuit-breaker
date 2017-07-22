@@ -1,4 +1,4 @@
-package io.lovan.artem.weatherapp;
+package io.lovan.artem.datetimeapp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -15,13 +15,13 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 @EnableDiscoveryClient
 @RestController
-public class WeatherAppApplication {
+public class DatetimeAppApplication {
 
     @Autowired
-    private WeatherService weatherService;
+    private DateTimeService dateTimeService;
 
     public static void main(String[] args) {
-        SpringApplication.run(WeatherAppApplication.class, args);
+        SpringApplication.run(DatetimeAppApplication.class, args);
     }
 
     @Bean
@@ -30,8 +30,8 @@ public class WeatherAppApplication {
         return new RestTemplate();
     }
 
-    @GetMapping("/current/weather")
+    @GetMapping("/current/time")
     public String getWeather() {
-        return "Current weather is " + weatherService.getWeather();
+        return "Current time is " + dateTimeService.getDateTime();
     }
 }
